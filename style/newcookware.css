@@ -1,0 +1,164 @@
+/*^------------------------ For Parent ------------------------*/
+/**------------------------ For Child ------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&family=Raleway&family=Source+Sans+3&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: hsl(210, 40%, 94%);
+    --nav-colr: #ccc;
+    --nav-bgcl: #222;
+    --trans : all 0.3s linear;
+    --nav-shadow : 5rem 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /*? 1rem = 10px */
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+/*^------------------------ Header ------------------------*/
+
+header {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--nav-bgcl);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin-bottom: 50rem;
+}
+
+
+/**------------------------ Logo --------------------------*/
+
+header .logo {
+    width: 12.2rem;
+    height: 100%;
+    background: url("../asset/images/logo/text.png");
+    background-size: contain;
+    margin-right: auto;
+}
+
+
+/**------------------------ Nav Bar ----------------------*/
+
+/* nav {
+    width: 80rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.navbar-list {
+    width: 80rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    list-style: none;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.navbar-list li {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    color: var(--nav-colr);
+    transition: var(--trans);
+}
+
+.navbar-list li a {
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--nav-colr);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-list li a:hover {
+    color: #fff;
+    background-color: #111;
+}
+
+.navbar-list li a:visited {
+    color: var(--nav-colr);
+}
+
+/**------------------------ Navbar Cookware Details ------------------------*/
+
+#cookware {
+    width: 15rem;
+    display: inline;
+}
+
+
+.cookware {
+    color: var(--nav-colr);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--trans);
+}
+
+.cookware-ol {
+    width: 20rem;
+    height: 24rem;
+    margin: 1.5rem 0 0 5rem;
+    padding: 0.3rem 0 1rem 0;
+    font-size: 1.5rem;
+    list-style: none;
+    background-color: rgba(34, 34, 34, 0.9);
+}
+
+.cookware-ol li {
+    padding: 0.6rem 0;
+}
+
+
+/*^------------------------ Main ------------------------*/
+
+main {
+    margin-left: 21rem;
+}
+
+
+/**------------------------ Non-Stick ---------------------*/
+
+
+
+/*^------------------------ Footer ------------------------*/
+ 
+footer {
+    width: 100%;
+    height: 4rem;
+    font-size: 1rem;
+    color: var(--nav-colr);
+    background-color: var(--nav-bgcl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+} 
+
+
+/*&------------------------ Media Quries ------------------------*/
+
+@media screen and (max-width: 930px) {
+    
+}

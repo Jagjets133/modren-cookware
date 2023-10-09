@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics | Modern Cookware</title>
+    <link rel="stylesheet" href="../style/cart.css">
+    
+    <!--! Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../asset/icon/icon 1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../asset/icon/icon 1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../asset/icon/icon 1/favicon-16x16.png">
+    <link rel="manifest" href="../asset/icon/icon 1/site.webmanifest">
+
+    <!--! Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <script src='https://kit.fontawesome.com/bcd1b2a4df.js' crossorigin='anonymous'></script>
+
+   <!--! Reveal Elements on Page Scroll -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    
+    <div class="navbar">
+
+        <div class="mobile-navbar">
+            <div class="text">MODERN COOKWARE</div>
+            <div class="logo"></div>
+        </div>
+
+        <aside>
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cookware.html">Cookware</a></li>
+                    <li><a href="electronics.html">Electronics</a></li>
+                    <li><a href="gadjets.html">Gadgets</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="sign-up.php">Sign-up</a></li>
+                </ul>
+            </nav>
+    
+            <div class="mobile-nav-btn">
+                <i class="fa-solid fa-bars" id="mobile-nav-icon"></i>
+                <i class="fa-solid fa-xmark" id="mobile-nav-icon"></i>
+            </div>
+        </aside>
+
+
+    </div>
+
+    <main> 
+        
+        <div class="cart">
+
+            <div class="left-div">
+                <div class="product">
+                    <div class="product_img" style="background-image: url('../asset/images/Electronics/raf air fryer.webp');"></div>
+                    <div class="item-counter">
+                        <i class="fa-solid fa-minus" onclick="decrement('item_counter', 'price', 'hide_price')"></i>
+                        <input type="number" class="item-count" id="item_counter" value="1" name="item-count">
+                        <i class="fa-solid fa-plus" onclick="increment('item_counter', 'price', 'hide_price')"></i>
+                    </div>
+                    <h1>Raf Air Fryer</h1>
+                    <p>COLOR: BLACK</p>
+                    <p>CAPACITY: 6L</p>
+                    <p>WEIGHT: 3KG</p>
+                    <div class="pricing">
+                        <span>
+                            <i class="fa-solid fa-trash"></i> Move to trash
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-heart"></i> Add to wishlist
+                        </span>
+                        <div class="price">$ <span id="price">70.00</span></div>
+                        <div class="hide-price" id="hide_price">70</div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="product_img" style="background-image: url('../asset/images/Electronics/raf air fryer.webp');"></div>
+
+                    <div class="item-counter">
+                        <i class="fa-solid fa-minus" onclick="decrement('item_counter1', 'price1', 'hide_price1')"></i>
+                        <input type="number" class="item-count" id="item_counter1" value="1" size="2" name="item-count">
+                        <i class="fa-solid fa-plus" onclick="increment('item_counter1', 'price1', 'hide_price1')"></i>
+                    </div>
+
+                    <h1>Raf Air Fryer</h1>
+                    <p>COLOR: BLACK</p>
+                    <p>CAPACITY: 6L</p>
+                    <p>WEIGHT: 3KG</p>
+
+                    <div class="pricing">
+                        <span>
+                            <i class="fa-solid fa-trash"></i> Move to trash
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-heart"></i> Add to wishlist
+                        </span>
+                        <div class="price">$ <span id="price1">50.00</span></div>
+                        <div class="hide-price" id="hide_price1">50</div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="right-div">
+                <h1>Total amount</h1>
+                <p>Product amount $<span id="product_amount">10.00</span></p>
+                <p>Delivery charges $<span id="delivery">50.00</span></p>
+                <hr/>
+                <p>Total amount $<span id="total">0.00</span></p>
+            </div>
+            
+        </div>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023-2023, moderncookware.com, Inc. or its affiliates</p>
+        <p>Made with &hearts; by Modern Cookware</p>
+    </footer> 
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        const mobile_nav = document.querySelector(".mobile-nav-btn");
+        // const nav_header = document.querySelector("aside");
+        const aside = document.querySelector('aside');
+
+        const toggleNavbar = () => {
+            aside.classList.toggle('active');
+        };
+
+        mobile_nav.addEventListener("click", () => toggleNavbar());
+
+
+        //* Footer
+        let main = document.querySelector('main');
+        let footer = document.querySelector('footer');
+        footer.style.top = main.offsetHeight + "px";
+
+        
+        //* Reveal Elements on Page Scroll
+        AOS.init();
+        
+    </script>
+
+    
+    <script>
+
+        let product_amount = parseInt(document.getElementById('product_amount').innerHTML);
+        let delivery = parseInt(document.getElementById('delivery').innerHTML);
+        let total = document.getElementById('total');
+
+
+        function decrement(item_counter, price, hidden_price) {
+            let item_count = document.getElementById(item_counter);
+            let item_price = document.getElementById(price);
+            let hide_price = document.getElementById(hidden_price);
+            let hide_price_int = parseInt(hide_price.innerHTML);
+
+            if(item_count.value <= 0) {
+                alert('Negative value not allowed');
+            } else {
+                item_count.value = parseInt(item_count.value) - 1;
+                item_price.innerHTML -= hide_price_int;
+                item_count.style.background = '#fff';
+                item_count.style.color = '#000';
+                total.innerHTML = product_amount + delivery;
+            }
+        }
+
+
+        function increment(item_counter, price, hidden_price) {
+            let item_count = document.getElementById(item_counter);
+            let item_price = document.getElementById(price);
+            let hide_price = document.getElementById(hidden_price);
+            let hide_price_int = parseInt(hide_price.innerHTML);
+
+            if(item_count.value >= 10) {
+                alert('Max 10 allowed');
+                item_count.style.background = '#f00';
+                item_count.style.color = '#fff';
+            } else {
+                item_count.value = parseInt(item_count.value) + 1;
+                item_price.innerHTML = hide_price_int * item_count.value;
+
+                product_amount.innerHTML = parseInt(item_price.innerHTML);
+
+                total.innerHTML = product_amount + delivery;
+
+            }
+        }
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<?php
+
+    session_start();  
+
+    if(!isset($_SESSION['username'])) {
+        ?>
+        <script>
+            alert("You are logged out");
+        </script>
+        <?php
+        header('location:../cookware.html');
+    }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookware | Modern Cookware</title>
+    <link rel="stylesheet" href="../../style/cookware.css">
+    
+    <!--! Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../asset/icon/icon 1/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../asset/icon/icon 1/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../asset/icon/icon 1/favicon-16x16.png">
+    <link rel="manifest" href="../../asset/icon/icon 1/site.webmanifest">
+
+    <!--! Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <script src='https://kit.fontawesome.com/bcd1b2a4df.js' crossorigin='anonymous'></script>
+
+   <!--! Reveal Elements on Page Scroll -->
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    
+    <div class="navbar">
+
+        <div class="mobile-navbar">
+            <div class="text">MODERN COOKWARE</div>
+            <div class="logo"></div>
+        </div>
+
+        <aside>
+            <nav>
+                <ul class="navbar-list">
+                    <li><a href="home.php">Home</a></li>
+                    <li>
+                        <details> 
+                            <summary class="cookware">Cookware</summary>
+                            <ol class="cookware-ol">
+                                <li><a href='#non-stick'>Non-stick Cookware Set</a></li>
+                                <li><a href='#oms-granite'>OMS Granite Cookware</a></li>
+                                <li><a href='#'>Bone China</a></li>
+                                <li><a href='#'>Marble Dinner Set</a></li>
+                                <li><a href='#'>Porcelain Dinner Set</a></li>
+                            </ol>
+                        </details>
+                    </li>
+                    <li><a href="electronics.php">Electronics</a></li>
+                    <li><a href="gadjets.php">Gadgets</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="log-out.php">Log-out</a></li>
+                    <li><a href='#'><?php echo $_SESSION['username']; ?></a></li>
+                </ul>
+            </nav>
+    
+            <div class="mobile-nav-btn">
+                <i class="fa-solid fa-bars" id="mobile-nav-icon"></i>
+                <i class="fa-solid fa-xmark" id="mobile-nav-icon"></i>
+            </div>
+        </aside>
+
+
+    </div>
+
+    <main> 
+        
+        <div id="non-stick" class="cookware-sets">
+            
+            <div class="box">
+                <img src="../../asset/images/cookware/non-stick cookware set red 6pcs.webp" alt="Non-stick Cookware Set Red 6Pcs">
+                <h1>Non-stick Cookware Set Red 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set blue 6pcs.webp" alt="Non-stick Cookware Set Blue 6Pcs">
+                <h1>Non-stick Cookware Set Blue 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set orange 6pcs.webp" alt="Non-stick Cookware Set Orange 6Pcs">
+                <h1>Non-stick Cookware Set Orange 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set purple 6pcs.webp" alt="Non-stick Cookware Set Purple 6Pcs">
+                <h1>Non-stick Cookware Set Purple 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set pink 6pcs.webp" alt="Non-stick Cookware Set Pink 6Pcs">
+                <h1>Non-stick Cookware Set Pink 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set black 6pcs.webp" alt="Non-stick Cookware Set Black 6Pcs">
+                <h1>Non-stick Cookware Set Black 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set brown 6pcs.webp" alt="Non-stick Cookware Set Brown 6Pcs">
+                <h1>Non-stick Cookware Set Brown 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/non-stick cookware set green 6pcs.webp" alt="Non-stick Cookware Set Green 6Pcs">
+                <h1>Non-stick Cookware Set Green 6Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 33,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+
+        </div>
+        
+
+        <div id="oms-granite" class="cookware-sets">
+
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs purple.webp" alt="OMS Granite Cookware Set Purple 7Pcs">
+                <h1>OMS Granite Cookware Set Purple 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 42,599.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs silver gold.webp" alt="OMS Granite Cookware Set Silver 7Pcs">
+                <h1>OMS Granite Cookware Set Silver 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 40,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs silver coper.webp" alt="OMS Granite Cookware Set Silver 7Pcs">
+                <h1>OMS Granite Cookware Set Silver 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 49,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs red.webp" alt="OMS Granite Cookware Set Red 7Pcs">
+                <h1>OMS Granite Cookware Set Red 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 47,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs coper.webp" alt="OMS Granite Cookware Set Coper 7Pcs">
+                <h1>OMS Granite Cookware Set Coper 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 57,599.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs copper.webp" alt="OMS Granite Cookware Set Coper 7Pcs">
+                <h1>OMS Granite Cookware Set Coper 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 40,599.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs gold.webp" alt="OMS Granite Cookware Set Gold 7Pcs">
+                <h1>OMS Granite Cookware Set Gold 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 40,999.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+            <div class="box" data-aos="fade-up">
+                <img src="../../asset/images/cookware/oms granite cookware set 7pcs black.webp" alt="OMS Granite Cookware Set Black 7Pcs">
+                <h1>OMS Granite Cookware Set Black 7Pcs</h1>
+                <div class="box-child">
+                    <b class="price">RS. 32,599.00</b>
+                    <a href="#" class="buy-now"><button> Buy Now </button></a>
+                </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2023-2023, moderncookware.com, Inc. or its affiliates</p>
+        <p>Made with &hearts; by Modern Cookware</p>
+    </footer> 
+
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        const mobile_nav = document.querySelector(".mobile-nav-btn");
+        const aside = document.querySelector('aside');
+
+        const toggleNavbar = () => aside.classList.toggle('active');
+
+        mobile_nav.addEventListener("click", () => toggleNavbar());
+
+
+        //* Footer
+        let main = document.querySelector('main');
+        let footer = document.querySelector('footer');
+        footer.style.top = main.offsetHeight + "px";
+
+        //* Reveal Elements on Page Scroll
+        AOS.init();
+        
+    </script>
+
+
+</body>
+</html>

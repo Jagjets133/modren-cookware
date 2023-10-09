@@ -1,0 +1,412 @@
+/*^------------------------ For Parent ------------------------*/
+/**------------------------ For Child ------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&family=Raleway&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Mooli&family=Poppins&family=Raleway&family=Source+Sans+3&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: hsl(210, 40%, 94%);
+    --nav-colr: #ccc;
+    --nav-bgcl: #222;
+    --trans : all 0.3s linear;
+    --shadow : 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    /*? 1rem = 10px */
+}
+
+body {
+    width: 98.7vw;
+    height: 100vh; 
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/*^------------------------ Customized Scroll Bar ------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0C045D;
+    border-radius: 6px;
+    border: .2rem solid var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightskyblue;
+}
+
+
+/*^------------------------ Aside ------------------------*/
+
+/**------------------------ Nav Bar ----------------------*/
+nav {
+    position: fixed;
+}
+
+.navbar-list {
+    width: 20rem;
+    height: 100%;
+    float: left;
+    position: fixed;
+    font-size: 2rem;
+    list-style: none;
+    background-color: var(--nav-bgcl);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.navbar-list::-webkit-scrollbar {
+    width: .7rem;
+}
+
+.navbar-list::-webkit-scrollbar-thumb {
+    background: lightskyblue;
+    border: .1rem solid #0C045D;
+    border-radius: 5rem;
+}
+
+.navbar-list li {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    color: var(--nav-colr);
+    transition: var(--trans);
+}
+
+.navbar-list li a {
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--nav-colr);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbar-list li a:hover {
+    color: #fff;
+    background-color: #111;
+}
+
+.navbar-list li a:visited {
+    color: var(--nav-colr);
+}
+
+
+/**------------------------ Mobile navbar ------------------------*/
+
+.mobile-navbar {
+    /* width: 99.7vw; */
+    width: calc(100% - 5rem);
+    height: 5rem;
+    background-color: var(--nav-bgcl); 
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobile-navbar .text {
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 2rem;    
+}
+
+.mobile-navbar .logo {
+    width: 13rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    background-image: url('../asset/images/logo/box, text.webp');
+    background-size: cover;
+}
+
+
+/**------------------------ Mobile icons ------------------------*/
+
+aside {
+    position: relative;
+    background-color: var(--nav-bgcl);
+    width: 15rem;
+    height: 100vh;
+    z-index: 999;
+}
+
+.mobile-nav-btn {
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    display: none;
+    background: transparent;
+    cursor: pointer;
+    /* position: absolute; */
+    position: sticky;
+    top: .5rem;
+    left: -24.5rem;
+}
+
+#mobile-nav-icon {
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    color: var(--nav-colr);
+}
+
+.fa-bars {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 1;
+}
+
+.fa-xmark { 
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    left: -23.5rem;
+}
+
+
+/*^------------------------ Main ------------------------*/
+
+main {
+    width: calc(100vw - 21rem);
+    height: auto;
+    min-height: calc(100vh - 4rem);
+    margin-left: 20rem;
+    padding: 1rem;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    max-width: 50rem;
+    width: 90vw;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-form h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-family: 'Mooli', sans-serif;
+}
+
+.contact-form h2 {
+    margin-bottom: 1rem;
+    font-family: 'Mooli', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/**----------------------- Contact Form ------------------------*/
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input, textarea {
+    width: 30rem;
+    height: 4rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.3rem;
+    border: 0.2rem solid #ccc;
+}
+
+textarea {
+    height: auto;
+}
+
+input:focus {
+    border: 0.2rem solid #0C045D;
+}
+
+#button {
+    width: 30rem;
+    height: 4rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ccc;
+    background-color: #0C045D;
+    color: #fff;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #291cb9;
+}
+
+#button:active {
+    background-color: #0C045D;
+}
+
+
+/**------------------------ Message ------------------------*/
+
+/* .hide {
+    display: none;
+}
+
+#contact_messege {
+    background-color: #0C045D;
+} */
+
+
+/*^------------------------ Footer ------------------------*/
+ 
+footer {
+    width: 100%;
+    height: 4rem;
+    font-size: 1rem;
+    color: var(--nav-colr);
+    background-color: var(--nav-bgcl);
+    position: absolute;
+    /* top: 300rem; */
+    left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+
+/*&------------------------ Media Quires ------------------------*/
+
+
+
+/* @media screen and (max-width: 768px) and (min-height: 23px) {
+    aside { top: 0rem; }
+} */
+
+/* Mobile */
+
+
+@media screen and (max-width: 768px) {
+    .mobile-nav-btn {
+        display: block;
+        z-index: 999;
+        /* border: 2px solid var(--nav-bgcl); */
+        transform: translateX(25rem);
+    }
+
+    /** navbar styling */
+
+    .mobile-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .navbar {
+        width: 99.7vw;
+        height: 5rem;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 999;
+        background-color: var(--nav-bgcl);
+
+    }
+
+    aside {
+        transform: translateX(-25rem);
+        transition: var(--trans);
+        top: 22rem;
+    }
+
+    nav {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+    }
+
+    .navbar-list {
+        width: 15rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar-list li {
+        margin: 0.8rem 0;
+        padding: 0.8rem 0;
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        margin-left: 0;
+        top: 2rem;
+    }
+
+    footer {
+        left: 0;
+    }
+
+    /*! Active class */
+
+    .active  {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    .active::after {
+        content: '';
+        width: calc(100vw - 15rem);
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 1rem;
+        left: 100%;
+    }
+
+    .active .mobile-nav-btn .fa-xmark {
+        display: block;
+    }
+
+    .active .mobile-nav-btn .fa-bars {
+        display: none;
+    }
+
+    /** Small Font Size **/
+
+    .mobile-navbar .text {
+        font-size: 1.5em;
+    }
+
+    .mobile-navbar .logo {
+        width: 11rem;
+        height: 3.2rem;
+    }
+
+}
+
+/* Laptop */
+
+@media screen and (max-width: 768px) and (max-height: 503px) {
+    aside { top: 13rem; }
+    .active::after { top: 0; }
+}

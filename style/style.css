@@ -1,0 +1,252 @@
+/*^------------------------ For Parent ------------------------*/
+/**------------------------ For Child ------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins&family=Raleway&family=Source+Sans+3&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: hsl(210, 40%, 94%);
+    --nav-colr: #ccc;
+    --nav-bgcl: #222;
+    --trans : all 0.3s linear;
+    --shadow : 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 98.7vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+
+/*^------------------------ Customized Scroll Bar ------------------------*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0C045D;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lightskyblue;
+} 
+
+
+/*^------------------------ Header ------------------------*/
+
+/**------------------------ Hero Section ------------------*/
+.hero {
+    width: 100%;
+    height: 50vh;
+    background-color: #0C045D;
+    background-image: url('../asset/images/Logo/box, text.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/**------------------------ Nav Bar ------------------------*/
+
+nav ul {
+    width: 100%;
+    height: 5rem;
+    font-size: 2rem;
+    list-style: none;
+    background-color: var(--nav-bgcl);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    padding: 1rem;
+    color: var(--nav-colr);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--trans);
+}
+
+nav ul li a:hover {
+    color: #fff;
+    background-color: #111;
+}
+
+nav ul li a:visited {
+    color: var(--nav-colr);
+}
+
+/*^------------------------ Main ------------------------*/
+
+/**------------------------ For all h1 and p -----------*/
+
+section h1 {
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 600 ;
+    text-align: center;
+}
+
+section p {    
+    padding: 1rem;
+    text-align: center;   
+}
+
+section p a {
+    padding: 1rem;
+    font-size: 2rem; 
+    color: #153883;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--trans);
+}
+
+section p a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+
+/**------------------------ Cookware ------------------------*/
+
+.cookware {
+    width: 100%;
+    height: auto;
+    min-height: 31rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;    
+}
+
+.box {
+    height: 30rem;
+    width: 23rem;
+    background-color: white;
+    padding: 1.7rem 1rem 1rem 1rem;
+    margin: 1rem;
+}
+
+.box .box-img {
+    height: 19rem;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.box p {
+    padding: 0.8rem 0 0 0 ;
+    font-size: 1.3rem;
+    display: inline;
+    color: #007185;
+    cursor: pointer;
+}
+
+.box p:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+
+/**------------------------ Electronics ------------------------*/
+
+section:nth-child(3) {
+    background-color: hsl(210, 40%, 90%);
+}
+
+.electronics {
+    width: 100%;
+    height: auto;
+    min-height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.electronics img {
+    margin: 1rem;
+    background-color: #fff;
+}
+
+
+/**------------------------ Gadjets ------------------------*/
+
+.gadjets {
+    width: 100%;
+    height: auto;
+    /* min-height: 45rem; ------------------------*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gadjets video {
+    height: 40rem;
+    margin: 5rem;
+    aspect-ratio: 9/16;
+}
+
+
+/*^------------------------ Footer ------------------------*/
+
+footer {
+    width: 100%;
+    height: 4rem;
+    font-size: 1rem;
+    color: var(--nav-colr);
+    background-color: var(--nav-bgcl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*&------------------------ Media Quires ------------------------*/
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        height: 30vh;
+    }
+
+    nav ul {
+        height: 25rem;
+        flex-direction: column;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 0.7rem;
+    }
+
+    .electronics img {
+        width: 15rem;
+        margin: 0.rem;
+    }
+
+    .gadjets video {
+        height: 50rem;
+        margin: 1rem;
+    }
+}
+
